@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { useState } from 'react';
 
 export default function Page() {
@@ -10,7 +10,7 @@ export default function Page() {
     const response = await fetch('/api/join', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ code, memberName })
+      body: JSON.stringify({ code, memberName }),
     });
     if (response.ok) {
       setJoined(true);
@@ -37,5 +37,5 @@ export default function Page() {
       <button onClick={joinList}>Beitreten</button>
       {joined && <p>Erfolgreich beigetreten!</p>}
     </div>
-  )
+  );
 }

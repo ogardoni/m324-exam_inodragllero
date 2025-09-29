@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { useState } from 'react';
 
 export default function Page() {
@@ -6,18 +6,18 @@ export default function Page() {
 
   const registerList = async () => {
     const response = await fetch('/api/register', {
-      method: 'POST' ,
-      headers: { 'Content-Type': 'application/json' }
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
     });
     const data = await response.json();
     setCode(data.code);
-  }
+  };
 
   return (
     <div>
       <h1>Neue Einkaufsliste erstellen</h1>
       <button onClick={registerList}>Einkaufsliste erstellen</button>
-      {code && <p>Teilen Sie diesen Code: {code}</p>}
+      {code && <p>Teilen Sie diesen Code: {code}</p>};
     </div>
-  )
+  );
 }

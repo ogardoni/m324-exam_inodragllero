@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { useState } from 'react';
 
 export default function AddItem() {
@@ -10,7 +10,7 @@ export default function AddItem() {
     const response = await fetch('/api/addItem', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ code, itemName })
+      body: JSON.stringify({ code, itemName }),
     });
     if (response.ok) {
       setAdded(true);
@@ -38,5 +38,5 @@ export default function AddItem() {
       <button onClick={addItem}>Hinzufügen</button>
       {added && <p>Artikel hinzugefügt!</p>}
     </div>
-  )
+  );
 }

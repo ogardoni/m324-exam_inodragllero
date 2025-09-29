@@ -24,5 +24,5 @@ export default function Home() {
         <p>Organisieren Sie Ihre Einkäufe zusammen - schnell, einfach und übersichtlich.</p>
       </footer>
     </div>
-  )
+  );
 }

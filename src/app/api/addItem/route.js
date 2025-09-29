@@ -9,7 +9,7 @@ export async function POST(request) {
       id: Date.now(), // Nutzt den aktuellen Zeitstempel als eindeutige ID
       name: itemName,
       reservedBy: null,
-      completed: false
+      completed: false,
     };
     shoppingLists[code].items.push(newItem);
     return NextResponse.json({ success: true });

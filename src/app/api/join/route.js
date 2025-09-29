@@ -3,9 +3,9 @@ import { shoppingLists } from '../data';
 
 export async function POST(request) {
   const { code, memberName } = await request.json();
-Object.keys(shoppingLists).forEach((code) => {
-   console.log("Code:", code);
-});
+  Object.keys(shoppingLists).forEach((code) => {
+    console.log('Code:', code);
+  });
 
   if (shoppingLists[code]) {
     shoppingLists[code].members.push(memberName);
